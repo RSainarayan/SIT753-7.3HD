@@ -1,0 +1,8 @@
+services:
+  api:
+    image: ghcr.io/youruser/node-ci-demo:${TAG:-latest}
+    ports:
+      - "8080:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
